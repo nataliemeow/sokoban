@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Naughty you are!</title>
+		<style>
+#controls button {
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+}
+		</style>
+	</head>
+	<body>
+		<table id='controls'>
+			<tbody>
+				<tr>
+					<td></td>
+					<td>
+						<button onclick='go([0, -1])'>
+							🠉
+						</button>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>
+						<button onclick='go([-1, 0])'>
+							🠈
+						</button>
+					</td>
+					<td></td>
+					<td>
+						<button onclick='go([0, +1])'>
+							🠊
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<button onclick='go([+1, 0])'>
+							🠋
+						</button>
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<script>
+playerS = {
+	-1: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAASUExURQAAAKe20WBSRv/Yuv///wAAAGpKlykAAAAGdFJOU///////ALO/pL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAABQSURBVChTbYwBDoAwCAOhyv+/bKEwl2nJClzKLA79A9s9nzubvAFg3AcA7sh9JQLGBJVzwdTFmsSAIgVuloCdiQ/okwbrUxGqZhmbzmWvIh6vawMC7oA51QAAAABJRU5ErkJggg==',
+	+1: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAASUExURQAAAKe20WBSRv/Yuv///wAAAGpKlykAAAAGdFJOU///////ALO/pL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAABOSURBVChTbYsLEoBACEKB8v5XDnX7WOEsrG8E8dI/wNPzkY72ExCQBiBESg3ctgSv6wKbJ9XA+wDOArtngOviUykyQbZK9W9zlC1wK+IArpYDAjMbE0EAAAAASUVORK5CYII='
+}
+		</script>
+	</body>
+</html>
