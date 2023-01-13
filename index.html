@@ -5,50 +5,46 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>razorlovesbaba Sokoban</title>
 		<style>
+#controls {
+	position: absolute;
+	bottom: 20px;
+}
 #controls button {
 	padding: 0;
-	width: 40px;
-	height: 40px;
-	font-size: 20px;
+	background: transparent;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	width: 50px; height: 50px;
+	padding: 2px;
+}
+@keyframes tap {
+	from {
+		background: #ccc;
+	}
+	to {
+		background: transparent;
+	}
+}
+#controls button:focus {
+	animation: .2s linear tap;
 }
 		</style>
 	</head>
 	<body>
-		<table id='controls'>
-			<tbody>
-				<tr>
-					<td></td>
-					<td>
-						<button onclick='go([0, -1])'>
-							🠉
-						</button>
-					</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>
-						<button onclick='go([-1, 0])'>
-							🠈
-						</button>
-					</td>
-					<td></td>
-					<td>
-						<button onclick='go([0, +1])'>
-							🠊
-						</button>
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>
-						<button onclick='go([+1, 0])'>
-							🠋
-						</button>
-					</td>
-					<td></td>
-				</tr>
-			</tbody>
-		</table>
+		<div id='controls'>
+			<button onclick='go(0, -1)'>
+				<img src='up.png' width='100%'>
+			</button>
+			<button onclick='go(-1, 0)'>
+				<img src='up.png' width='100%' style='transform: rotate(270deg);'>
+			</button>
+			<button onclick='go(+1, 0)'>
+				<img src='up.png' width='100%' style='transform: rotate(90deg);'>
+			</button>
+			<button onclick='go(0, +1)'>
+				<img src='up.png' width='100%' style='transform: rotate(180deg);'>
+			</button>
+		</div>
 		<script src='script.js'></script>
 	</body>
 </html>
