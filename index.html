@@ -4,10 +4,17 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>razorlovesbaba Sokoban</title>
+		<script defer src='game.js'></script>
 		<style>
+html, body {
+	width: 100%; height: 100%;
+}
+body {
+	margin: 0;
+}
 #controls {
 	position: absolute;
-	bottom: 20px;
+	bottom: 50px;
 }
 #controls button {
 	padding: 0;
@@ -18,33 +25,33 @@
 	padding: 2px;
 }
 @keyframes tap {
-	from {
+	0%, 25% {
 		background: #ccc;
 	}
-	to {
+	100% {
 		background: transparent;
 	}
 }
-#controls button:focus {
-	animation: .2s linear tap;
+#controls button:active {
+	animation: .3s linear tap;
 }
 		</style>
 	</head>
 	<body>
+		<canvas id='game'></canvas>
 		<div id='controls'>
-			<button onclick='go(0, -1)'>
-				<img src='up.png' width='100%'>
-			</button>
 			<button onclick='go(-1, 0)'>
 				<img src='up.png' width='100%' style='transform: rotate(270deg);'>
 			</button>
 			<button onclick='go(+1, 0)'>
 				<img src='up.png' width='100%' style='transform: rotate(90deg);'>
 			</button>
+			<button onclick='go(0, -1)'>
+				<img src='up.png' width='100%'>
+			</button>
 			<button onclick='go(0, +1)'>
 				<img src='up.png' width='100%' style='transform: rotate(180deg);'>
 			</button>
 		</div>
-		<script src='script.js'></script>
 	</body>
 </html>
