@@ -78,7 +78,7 @@ function loadLevel(index) {
 }
 
 function nextLevelAlert() {
-	alert.style.left = 'display';
+	alert.style.display = 'none';
 	if (currentLevel < levels.length - 1)
 		loadLevel(++currentLevel);
 }
