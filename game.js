@@ -78,7 +78,7 @@ function loadLevel(index) {
 }
 
 function nextLevelAlert() {
-	alert.style.left = '100vw';
+	alert.style.left = 'display';
 	if (currentLevel < levels.length - 1)
 		loadLevel(++currentLevel);
 }
@@ -183,7 +183,7 @@ function update(x, y) {
 			'%cyay !!!!',
 			'font-size: 54px; color: goldenrod; font-family: "Comic Sans MS", cursive; font-weight: bold;'
 		);
-		alert.style.left = '';
+		alert.style.display = '';
 	}
 	if (!fail) {
 		player.p.x += player.d.x;
@@ -205,6 +205,6 @@ document.onkeydown = event => {
 */
 
 window.onload = () => {
-	alert.style.left = '100vw';
+	alert.style.display = 'none';
 	loadLevel(0);
 };
